@@ -785,7 +785,11 @@ void Commands::FixSlashes(char *a_pstr)
 //
 void Commands::PrintUsageMessage(void)
 {
+#ifdef _WIN32
 	printf("Usage: etctool.exe source_image [options ...] -output <output_file>\n");
+#else
+	printf("Usage: etctool source_image [options ...] -output <output_file>\n");
+#endif // _WIN32
 	printf("Options:\n");
 	printf("    -analyze <analysis_folder>\n");
 	printf("    -argfile <arg_file>           additional command line arguments\n");
