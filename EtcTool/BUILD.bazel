@@ -1,0 +1,13 @@
+
+cc_binary(
+    name = "EtcTool",
+    srcs = glob([
+        "*.h",
+        "*.cpp",
+    ]),
+    deps = [
+        "//EtcLib",
+        "//third_party:lodepng"
+    ],
+    visibility = ["//visibility:public"],
+)

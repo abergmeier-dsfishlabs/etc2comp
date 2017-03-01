@@ -1,0 +1,15 @@
+
+package(default_visibility=["//visibility:public"])
+
+cc_library(
+    name = "lodepng",
+    hdrs = glob([
+        "lodepng/*.h",
+    ]),
+    srcs = glob([
+        "lodepng/*.cpp",
+    ]),
+    includes = [
+        "lodepng",
+    ],
+)
